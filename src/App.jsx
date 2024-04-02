@@ -48,7 +48,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h1 className="title">Phonebook</h1>
       <ContactForm onSubmit={handleSubmit} />
       <SearchBox searchStr={searchStr} onChangeSearch={setSearchStr} />
