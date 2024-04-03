@@ -4,7 +4,11 @@ import s from "./ContactList.module.css";
 const ContactList = ({ contacts, handleDelete }) => {
   return (
     <ul className={s.list}>
-      <Contact contacts={contacts} handleDelete={handleDelete} />
+      {contacts.map((contact) => (
+        <li key={contact.id} className={s.item}>
+          <Contact contact={contact} handleDelete={handleDelete} />
+        </li>
+      ))}
     </ul>
   );
 };
